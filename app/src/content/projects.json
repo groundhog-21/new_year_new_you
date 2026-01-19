@@ -4,9 +4,19 @@
     "title": "Explainable Survival: From Prediction to Trust in Hex",
     "one_liner": "Local modeling, error analysis, and explainability work supporting an interactive, explainable ML app built in Hex.",
     "problem": "Just predicting survival on the Titanic dataset doesn't generate explainable results.",
-    "approach": "This project reframes the classic Titanic survival prediction problem as a trust, error analysis, and interpretability challenge, rather than a leaderboard optimization task.",
-    "tradeoffs": "This project was not about producing a Titanic leaderboard 'winner'.",
+    "approach": "This project reframes the classic Titanic survival prediction problem as a trust, error analysis, and interpretability challenge...",
+    "tradeoffs": "This project was not about producing a Titanic leaderboard 'winner'...",
     "tech": ["Python", "Hex"],
     "repo_url": "https://github.com/groundhog-21/hex-a-thon"
+  },
+  {
+    "slug": "westmarch-house",
+    "title": "The House of Westmarch: A Multi-Agent Concierge Estate of Dubious Decorum",
+    "one_liner": "A quartet of aristocratic companions who attend to your affairs—planning, inquiry, drafting, critique—with charm and dignified commotion.",
+    "problem": "Making agents remember details from previous interactions is challenging.",
+    "approach": "This project defines a set of four distinct agents, each with their own personality and expertise...",
+    "tradeoffs": "Interactions are meant to be light-hearted and entertaining rather than strictly utilitarian...",
+    "tech": ["Python", "Streamlit", "Gemini API", "OpenAI API"],
+    "repo_url": "https://github.com/groundhog-21/westmarch-house"
   }
 ]

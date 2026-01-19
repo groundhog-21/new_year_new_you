@@ -13,13 +13,19 @@ export type Project = {
 };
 
 export function loadProjects(): Project[] {
+  // We change the path to look INSIDE the src folder instead of the parent folder
   const filePath = path.join(
     process.cwd(),
-    "..",
-    "content",
+    "src",      // Look in src
+    "content",  // then content
     "projects.json"
   );
 
-  const raw = fs.readFileSync(filePath, "utf-8");
-  return JSON.parse(raw);
+  try {
+    const raw = fs.readFileSync(filePath, "utf-8");
+    return JSON.parse(raw);
+  } catch (error) {
+    console.error("Could not find projects.json at:", filePath);
+    return []; // Return an empty list so the page doesn't crash entirely
+  }
 }
