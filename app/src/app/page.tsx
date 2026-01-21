@@ -2,19 +2,27 @@ import Link from "next/link";
 
 export default function HomePage() {
   return (
-    <main style={{ padding: "2rem", maxWidth: "800px" }}>
-      <h1>AI Portfolio</h1>
+    <main style={{ padding: "2rem", maxWidth: "800px", lineHeight: "1.6" }}>
+      {/* Title with space below */}
+      <h1 style={{ marginBottom: "1.5rem" }}>The Accidental Portfolio</h1>
 
-      <p>
-        This site presents a small, curated set of projects.
+      {/* First paragraph with space below */}
+      <p style={{ marginBottom: "1.5rem" }}>
+        This site presents a small, curated set of projects—the ones that 
+        actually made it past the "good idea at 2 AM" phase and survived 
+        long enough to be hosted here.
       </p>
 
+      {/* Second paragraph */}
       <p>
-        The portfolio is static-first and content-driven. An AI layer is used
-        later to help interpret the work, not to generate it.
+        This portfolio is built on a foundation of old-fashioned manual labor  
+        and <strong>significant overthinking</strong>. It’s static-first and content-driven,  
+        meaning I did the actual work. The AI layer comes in at the end—mostly  
+        as <strong>a second opinion to explain what I was trying to do</strong> and to spot any  
+        logic that I may have accidentally misplaced.
       </p>
 
-      {/* This container creates the blue link and the consistent bottom line */}
+      {/* Navigation Links container */}
       <div style={{ 
         display: "flex", 
         flexDirection: "column", 

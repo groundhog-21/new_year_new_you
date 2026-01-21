@@ -2,11 +2,13 @@ import Link from "next/link";
 
 export default function HowIWorkPage() {
   return (
-    <main style={{ padding: "2rem", maxWidth: "800px" }}>
-      <h1>How I Work</h1>
+    <main style={{ padding: "2rem", maxWidth: "800px", lineHeight: "1.6" }}>
+      {/* Title with consistent blank line after it */}
+      <h1 style={{ marginBottom: "1.5rem" }}>How I Work</h1>
 
       <section style={{ marginTop: "2rem" }}>
-        <h2>Engineering Values</h2>
+        {/* Subheading with consistent blank line after it */}
+        <h2 style={{ marginBottom: "1rem" }}>Engineering Values</h2>
         <p>
           I like to build <strong>useful things as simply as possible</strong>. 
           Engineering always has to be fun for me—it's a hobby, not a profession—so 
@@ -15,7 +17,8 @@ export default function HowIWorkPage() {
       </section>
 
       <section style={{ marginTop: "2rem" }}>
-        <h2>AI Philosophy</h2>
+        {/* Subheading with consistent blank line after it */}
+        <h2 style={{ marginBottom: "1rem" }}>AI Philosophy</h2>
         <p>
           I try to integrate AI into my projects <strong>to the greatest extent possible</strong>,  
           using AI throughout the development process itself, both creative and technical.

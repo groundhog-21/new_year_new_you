@@ -2,7 +2,7 @@
   {
     "slug": "hex-a-thon",
     "title": "Explainable Survival: From Prediction to Trust in Hex",
-    "one_liner": "Local modeling, error analysis, and explainability work supporting an interactive, explainable ML app built in Hex.",
+    "one_liner": "Local modeling, error analysis, and explainability work supporting an interactive ML app built in Hex.",
     "problem": "Just predicting survival on the Titanic dataset doesn't generate explainable results.",
     "approach": "This project reframes the classic Titanic survival prediction problem as a trust, error analysis, and interpretability challenge...",
     "tradeoffs": "This project was not about producing a Titanic leaderboard 'winner'...",

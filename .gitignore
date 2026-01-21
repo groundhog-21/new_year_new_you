@@ -1,26 +1,36 @@
-# OS
-.DS_Store
-Thumbs.db
+# 1. Contest Documentation
+# ---------------------------------------------------
+# Excludes the specific PDF files from the competition.
+*_New Year, New You_ Portfolio Challenge - *.pdf
 
-# Editors
-.vscode/
-.idea/
+# 2. Next.js & Build Output
+# -------------------------
+# The **/ ensures these are ignored even inside the /app directory.
+**/node_modules/
+**/.next/
+**/out/
+**/build/
+**/dist/
 
-# Node
-node_modules/
-npm-debug.log*
-pnpm-lock.yaml
+# 3. Environment Secrets (CRITICAL for Public Repo)
+# -------------------------------------------------
+# Prevents your Gemini API key from leaking to GitHub.
+**/.env
+**/.env.local
+**/.env.development.local
+**/.env.test.local
+**/.env.production.local
+**/.env*.local
 
-# Python
-.venv/
-__pycache__/
-*.pyc
+# 4. Logs, OS, & IDE Files
+# ------------------
+**/npm-debug.log*
+**/.DS_Store
+**/Thumbs.db
+**/.vscode/
+**/.idea/
 
-# Build outputs
-dist/
-build/
-.out/
-
-# Env / secrets
-.env
-.env.*
+# 5. Infrastructure
+# ------------------
+# Ignores local Google Cloud credentials if generated.
+**/.gcloud/
