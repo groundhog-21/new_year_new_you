@@ -27,11 +27,13 @@ To test the production container locally: ```docker build -t hobbyist-portfolio 
 Deployments are handled via the gcloud CLI. The environment variable for the Gemini API is injected at the service level:
 
 ```
-gcloud run deploy hobbyist-portfolio
+gcloud run deploy hobbyist-portfolio `
 
---source .
+--source . `
 
---region us-central1
+--region us-central1 `
+
+--allow-unauthenticated `
 
 --set-env-vars GOOGLE_GENERATIVE_AI_API_KEY=your_actual_api_key_here
 ```
