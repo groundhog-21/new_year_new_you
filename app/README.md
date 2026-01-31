@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio Application — Technical Guide
+This directory contains the Next.js source code for the "Accidental Portfolio." It is designed for high-performance delivery via Google Cloud Run and utilizes Gemini 3 Flash for dynamic content synthesis.
 
-## Getting Started
+## 🛠 Local Development
+First, install dependencies:
 
-First, run the development server:
+```npm install ```
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Create a `.env.local` file in this directory and add your API key:
+
+```GOOGLE_GENERATIVE_AI_API_KEY=your_key_here ```
+
+Run the development server: ```npm run dev ```
+
+Open http://localhost:3000 to view the application.
+
+### 🐳 Containerization & Deployment
+This project uses a multi-stage Docker build to keep the final production image small and secure.
+
+1. The .gcloudignore / .dockerignore
+To ensure fast deployments, we utilize `.gcloudignore` to prevent the upload of `node_modules` and `.next` folders (reducing upload size from ~850MB to ~300KB).
+
+2. Build and Run Locally (Docker)
+To test the production container locally: ```docker build -t hobbyist-portfolio . docker run -p 8080:8080 --env-file .env.local hobbyist-portfolio ```
+
+3. Deploy to Google Cloud Run
+Deployments are handled via the gcloud CLI. The environment variable for the Gemini API is injected at the service level:
+
+```
+gcloud run deploy hobbyist-portfolio
+
+--source .
+
+--region us-central1
+
+--set-env-vars GOOGLE_GENERATIVE_AI_API_KEY=your_actual_api_key_here
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 🏗 Key Logic: Gemini Integration
+The core AI logic resides in `src/lib/gemini.ts`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Model: `gemini-3-flash-preview`
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Execution: Server-side only (Next.js Server Actions)
 
-## Learn More
+Error Handling: Implements a `try/catch` wrapper with debug isolation logs to ensure the UI remains functional even during API rate-limiting or outages.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+*Note: This project was bootstrapped with `create-next-app` but has been heavily modified for the 2026 Portfolio Challenge.*
