@@ -1,5 +1,15 @@
 [
   {
+    "slug": "gemini-3-hackathon",
+    "title": "Lighthouse 3: Strategic Intelligence Advisor",
+    "one_liner": "An autonomous high-reasoning agent that filters the noise of the AI market to deliver verified, ROI-focused strategic briefings directly to C-Suite executives.",
+    "problem": "Executives today are drowning in 'AI noise' and need a trusted advisor to distill actionable insights.",
+    "approach": "Lighthouse 3 performs deep-dive 'Intelligence Hunts' to produce professional-grade strategic briefings rendered through a minimalist web portal.",
+    "tradeoffs": "No fancy bells & whistles here, this is built on a 'Lean Executive' architecture designed for speed and reliability.",
+    "tech": ["Python", "Google Cloud SDK", "Gemini 3 Pro Preview", "Google Search Grounding"],
+    "repo_url": "https://github.com/groundhog-21/gemini_3_hackathon"
+  },
+  {
     "slug": "hex-a-thon",
     "title": "Explainable Survival: From Prediction to Trust in Hex",
     "one_liner": "Local modeling, error analysis, and explainability work supporting an interactive ML app built in Hex.",
