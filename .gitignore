@@ -1,7 +1,7 @@
 # 1. Contest Documentation
 # ---------------------------------------------------
-# Excludes the specific PDF files from the competition.
-*_New Year, New You_ Portfolio Challenge - *.pdf
+# Document files are excluded.
+**/docs/
 
 # 2. Next.js & Build Output
 # -------------------------
