@@ -1,4 +1,14 @@
 [
+    {
+    "slug": "byte-2-beat",
+    "title": "Rapid Screening for Cardiovascular Risk",
+    "one_liner": "A high-sensitivity triage tool using 7 objective 'hard indicators' to predict heart disease. We achieved 73% recall, turning simple health data into immediate, life-saving clinical insights.",
+    "problem": "Traditional cardiovascular risk assessments often rely on subjective patient surveys or time-consuming laboratory tests that can delay life-saving triage.",
+    "approach": "We identify a set of seven objective, verifiable data points that can be gathered in under 60 seconds to provide immediate clinical triage.",
+    "tradeoffs": "Unlike standard models that aim for raw accuracy, our tool is optimized for clinical triage, ensuring that we catch as many at-risk individuals as possible",
+    "tech": ["Python", "scikit-learn", "statsmodels", "Matplotlib", "Seaborn"],
+    "repo_url": "https://github.com/groundhog-21/hack4health"
+  },
   {
     "slug": "gemini-3-hackathon",
     "title": "Lighthouse 3: Strategic Intelligence Advisor",
