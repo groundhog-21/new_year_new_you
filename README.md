@@ -20,10 +20,10 @@ A high-performance, minimalist developer portfolio built for the **Google AI "Ne
 - **Infrastructure:** Docker with optimized `.gcloudignore` for rapid CI/CD.
 
 ## 📖 Project Structure
-The project is organized to separate content from logic:
-- `src/content/projects.json`: The metadata repository for all portfolio entries.
-- `src/lib/gemini.ts`: The bridge to the Gemini 3 Flash engine, handling error states and fallback insights.
-- `src/app/portfolio/page.tsx`: The streaming UI implementation using React Suspense boundaries.
+The application lives in the `app/` directory. Key paths from the repository root are:
+- `app/src/content/projects.json`: The metadata repository for all portfolio entries.
+- `app/src/lib/gemini.ts`: The bridge to the Gemini 3 Flash engine, handling error states and fallback insights.
+- `app/src/app/portfolio/page.tsx`: The streaming UI implementation using React Suspense boundaries.
 
 ## 🚦 Status
 ✅ **Challenge submission complete** — The project was completed and submitted for the 2026 Portfolio Challenge. The original Google Cloud Run deployment has since been retired to avoid ongoing hosting costs, so the application is no longer live.
