@@ -2,8 +2,8 @@
 
 A high-performance, minimalist developer portfolio built for the **Google AI "New Year, New You" Portfolio Challenge**. This project prioritizes engineering judgment over marketing, balancing "static-first" speed with "dynamic-next" AI insights.
 
-## 🚀 Live Links
-* **Live Application:** [View Portfolio on Google Cloud Run](https://hobbyist-portfolio-106125580489.us-central1.run.app/portfolio)
+## 🚀 Project & Submission Links
+* **Original Cloud Run Deployment:** Retired. The application was originally deployed to Google Cloud Run for the challenge; the hosted service was later shut down to avoid ongoing cloud charges.
 * **Dev.to Submission:** [The Accidental Portfolio - Official Post](https://dev.to/groundhog21/the-accidental-portfolio-a-hobbyists-guide-to-useful-things-and-ai-second-opinions-d1d)
 
 ## 🛠 Features
@@ -11,12 +11,12 @@ A high-performance, minimalist developer portfolio built for the **Google AI "Ne
 - **Zero-Lag Architecture:** Implements Next.js **Suspense** and **Streaming** (Server Components). The core portfolio UI renders instantly from static data, while the AI insights stream in asynchronously to prevent blocking the user experience.
 - **Decoupled Content:** Uses a clean `projects.json` structure as a single source of truth, allowing for rapid updates without modifying the underlying application logic.
 - **Engineering-First Detail:** Project pages focus on technical values and "How I Work" documentation, moving beyond the standard résumé format to show the developer's thought process.
-- **Cloud-Native Deployment:** Fully containerized with an optimized multi-stage Docker build and deployed to **Google Cloud Run** for serverless scaling and high availability.
+- **Cloud-Native Deployment:** Fully containerized with an optimized multi-stage Docker build and originally deployed to **Google Cloud Run** for the challenge.
 
 ## 🏗 Tech Stack
 - **Framework:** Next.js (App Router)
 - **AI Integration:** Google Gemini API (Gemini 3 Flash via Google AI Studio)
-- **Deployment:** Google Cloud Run
+- **Original Deployment:** Google Cloud Run (deployment retired)
 - **Infrastructure:** Docker with optimized `.gcloudignore` for rapid CI/CD.
 
 ## 📖 Project Structure
@@ -26,7 +26,7 @@ The project is organized to separate content from logic:
 - `src/app/portfolio/page.tsx`: The streaming UI implementation using React Suspense boundaries.
 
 ## 🚦 Status
-✅ **Complete** — Live, functional, and submitted for the 2026 Portfolio Challenge.
+✅ **Challenge submission complete** — The project was completed and submitted for the 2026 Portfolio Challenge. The original Google Cloud Run deployment has since been retired to avoid ongoing hosting costs, so the application is no longer live.
 
 ---
 *Built with curiosity and restraint by groundhog21.*
